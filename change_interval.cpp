@@ -5,7 +5,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+        http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
@@ -22,15 +22,15 @@ nothing else that sets the timer interrupt interval is running.
 */
 
 #include <Windows.h>
-#include <stdio.h>
+#include <cstdio>
 
 int main(int argc, char *argv[]) {
-  for (;;) {
-    for (int i = 1; i < 16; ++i) {
-      printf("Setting timer interrupt interval to %d.\n", i);
-      timeBeginPeriod(i);
-      Sleep(4000);
-      timeEndPeriod(i);
+    while(true) {
+        for (int i = 1; i < 16; ++i) {
+            printf("Setting timer interrupt interval to %d.\n", i);
+            timeBeginPeriod(i);
+            Sleep(4000);
+            timeEndPeriod(i);
+        }
     }
-  }
 }
