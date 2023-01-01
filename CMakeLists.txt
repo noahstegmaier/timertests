@@ -21,8 +21,8 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     add_compile_options(-Wall -Wextra -Wno-unused-parameter -Werror)
 endif()
 
-add_executable(fastboi main.cpp)
-target_link_libraries(fastboi PRIVATE winmm.lib fmt::fmt)
+add_executable(fastsleep fastsleep.cpp)
+target_link_libraries(fastsleep PRIVATE winmm.lib fmt::fmt)
 
 add_executable(change_interval change_interval.cpp)
 target_link_libraries(change_interval PRIVATE winmm.lib)
