@@ -27,8 +27,6 @@ nothing else that sets the timer interrupt interval is running.
 #include <stdio.h>
 #include <vcruntime.h>
 
-#pragma comment(lib, "winmm.lib")
-
 NTSYSAPI NTSTATUS NTAPI NtQueryTimerResolution(PULONG MinimumResolution,
                                                PULONG MaximumResolution,
                                                PULONG CurrentResolution);

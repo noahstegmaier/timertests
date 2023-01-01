@@ -24,8 +24,6 @@ nothing else that sets the timer interrupt interval is running.
 #include <Windows.h>
 #include <stdio.h>
 
-#pragma comment(lib, "winmm.lib")
-
 int main(int argc, char *argv[]) {
   for (;;) {
     for (int i = 1; i < 16; ++i) {
