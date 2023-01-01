@@ -21,6 +21,10 @@ if(CMAKE_CXX_COMPILER_ID STREQUAL "Clang")
     add_compile_options(-Wall -Wextra -Wno-unused-parameter -Werror)
 endif()
 
+if(CMAKE_CXX_COMPILER_ID STREQUAL "MSVC")
+    add_compile_options(/utf-8 /W3 /WX /sdl)
+endif()
+
 add_executable(fastsleep fastsleep.cpp)
 target_link_libraries(fastsleep PRIVATE winmm.lib fmt::fmt)
 
